@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AyuBot — Le Bot Discord Ultime</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="glow blob-1"></div>
+    <div class="glow blob-2"></div>
+
+    <!-- MENU LATÉRAL GAUCHE -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <img src="Logo AyuBot.png" alt="AyuBot Logo">
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#hero" class="sidebar-link" title="Accueil">
+                <span class="sidebar-icon">🏠</span>
+                <span class="sidebar-label">Accueil</span>
+            </a>
+            <a href="#features" class="sidebar-link" title="Fonctionnalités">
+                <span class="sidebar-icon">⚡</span>
+                <span class="sidebar-label">Options</span>
+            </a>
+            <a href="#commands" class="sidebar-link" title="Commandes">
+                <span class="sidebar-icon">⌨️</span>
+                <span class="sidebar-label">Commandes</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- CONTENU PRINCIPAL -->
+    <div class="main-wrapper">
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="container nav-container">
+                <div class="logo-brand">
+                    <img src="Logo AyuBot.png" alt="AyuBot Logo" class="nav-logo">
+                    <span class="logo-text">AyuBot</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#commands" class="btn btn-secondary-nav">Commandes</a>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1548009532238594080&permissions=8&integration_type=0&scope=bot" target="_blank" class="btn btn-nav">Inviter le Bot</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <header id="hero" class="hero">
+            <div class="container">
+                <div class="bot-avatar-container">
+                    <img src="Logo AyuBot.png" alt="AyuBot Logo" class="hero-logo">
+                </div>
+                <div class="badge">
+                    <span class="status-dot warning"></span> En développement actif
+                </div>
+                <h1>Le bot moderne pour votre communauté</h1>
+                <p>Modération, logs, tickets et rôles réactions. Actuellement en cours de développement pour vous offrir la meilleure expérience possible.</p>
+                <div class="hero-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=1548009532238594080&permissions=8&integration_type=0&scope=bot" target="_blank" class="btn btn-primary">Ajouter à Discord</a>
+                    <a href="#features" class="btn btn-secondary">Voir les options</a>
+                    <a href="#commands" class="btn btn-secondary">Voir les commandes</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- FEATURES SECTION -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Des fonctionnalités taillées pour la performance</h2>
+                <div class="grid">
+                    
+                    <div class="card">
+                        <div class="icon-wrapper">🛡️</div>
+                        <h3>Modération Intelligente</h3>
+                        <p>Gestion précise des avertissements, expulsions et bannissements avec historique SQLite sécurisé.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-wrapper">📜</div>
+                        <h3>Logs & Traçabilité</h3>
+                        <p>Suivi en temps réel des actions de modération, des suppressions de messages et des roles des membres.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-wrapper">🎫</div>
+                        <h3>Tickets & Support</h3>
+                        <p>Système de support privé instantané avec boutons interactifs et gestion automatique des salons.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-wrapper">🎭</div>
+                        <h3>Rôles par Réaction</h3>
+                        <p>Attribution fluide de rôles personnalisés lors des événements et de l'accueil des nouveaux membres.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-wrapper">ℹ️</div>
+                        <h3>Profils & Serveur</h3>
+                        <p>Cartes d'informations dynamiques (<code>/userinfo</code>, <code>/serverinfo</code>) directement visibles par votre communauté.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-wrapper">📢</div>
+                        <h3>Interaction Rapide</h3>
+                        <p>Envoi de messages personnalisés (<code>/say</code>) et ajout de réactions d'une simple commande (<code>/react</code>).</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-wrapper">🛠️</div>
+                        <h3>Développement Continu</h3>
+                        <p>Hébergé sur serveur Linux dédié avec de nouvelles fonctionnalités ajoutées régulièrement.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMANDS SECTION -->
+        <section id="commands" class="commands-section">
+            <div class="container">
+                <h2>Liste des Commandes</h2>
+                <div class="commands-grid">
+                    
+                    <!-- MODÉRATION -->
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/clear &lt;nombre&gt;</code>
+                            <span class="cmd-badge mod">Modération</span>
+                        </div>
+                        <p>Supprime entre 1 et 100 messages dans le salon courant.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/warn &lt;membre&gt; [raison]</code>
+                            <span class="cmd-badge mod">Modération</span>
+                        </div>
+                        <p>Attribue un avertissement à un membre et enregistre la sanction.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/warns &lt;membre&gt;</code>
+                            <span class="cmd-badge mod">Modération</span>
+                        </div>
+                        <p>Affiche l'historique complet des avertissements d'un membre.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/warn_list</code>
+                            <span class="cmd-badge mod">Modération</span>
+                        </div>
+                        <p>Affiche la liste globale des membres avertis sur le serveur.</p>
+                    </div>
+
+                    <!-- CONFIGURATION -->
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/set_welcome &lt;salon&gt;</code>
+                            <span class="cmd-badge config">Config</span>
+                        </div>
+                        <p>Définit le salon dédié aux messages de bienvenue.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/set_welcome_message &lt;texte&gt;</code>
+                            <span class="cmd-badge config">Config</span>
+                        </div>
+                        <p>Personnalise le message d'accueil avec les variables <code>{user}</code>, <code>{server}</code>, <code>{count}</code>.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/welcome_test</code>
+                            <span class="cmd-badge config">Config</span>
+                        </div>
+                        <p>Simule et teste l'affichage du message de bienvenue.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/set_logs &lt;salon&gt;</code>
+                            <span class="cmd-badge config">Config</span>
+                        </div>
+                        <p>Définit le salon où seront envoyés les logs de modération et d'événements.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/set_autorole &lt;rôle&gt;</code>
+                            <span class="cmd-badge config">Config</span>
+                        </div>
+                        <p>Attribue automatiquement un rôle aux nouveaux arrivants.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/set_counting &lt;salon&gt;</code>
+                            <span class="cmd-badge config">Config</span>
+                        </div>
+                        <p>Configure le salon pour le jeu de comptage et y publie le règlement.</p>
+                    </div>
+
+                    <!-- MODULES -->
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/setup_tickets &lt;rôle&gt;</code>
+                            <span class="cmd-badge feature">Module</span>
+                        </div>
+                        <p>Installe le panneau interactif pour l'ouverture de tickets de support.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/setup_reaction_menu</code>
+                            <span class="cmd-badge feature">Module</span>
+                        </div>
+                        <p>Crée un menu interactif d'attribution de rôles par réactions.</p>
+                    </div>
+
+                    <!-- INFORMATION & UTILITAIRES -->
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/userinfo [membre]</code>
+                            <span class="cmd-badge info">Info</span>
+                        </div>
+                        <p>Affiche les informations détaillées sur un profil utilisateur.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/serverinfo</code>
+                            <span class="cmd-badge info">Info</span>
+                        </div>
+                        <p>Affiche les données et statistiques générales du serveur.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/say &lt;message&gt; [salon]</code>
+                            <span class="cmd-badge util">Utilitaire</span>
+                        </div>
+                        <p>Envoie un message dans un salon spécifique au nom du bot.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/react &lt;émoji&gt;</code>
+                            <span class="cmd-badge util">Utilitaire</span>
+                        </div>
+                        <p>Ajoute la réaction spécifiée sur le message précédent.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <p>© AyuBot — Version Beta en développement. Conçu pour propulser vos serveurs Discord.</p>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>
