@@ -78,7 +78,7 @@
                     <div class="card">
                         <div class="icon-wrapper">🛡️</div>
                         <h3>Modération Intelligente</h3>
-                        <p>Gestion précise des avertissements, expulsions et bannissements avec historique SQLite sécurisé.</p>
+                        <p>Gestion des avertissements, des bannissements et des exclusions temporaires avec historique sécurisé.</p>
                     </div>
 
                     <div class="card">
@@ -100,15 +100,15 @@
                     </div>
 
                     <div class="card">
-                        <div class="icon-wrapper">ℹ️</div>
-                        <h3>Profils & Serveur</h3>
-                        <p>Cartes d'informations dynamiques (<code>/userinfo</code>, <code>/serverinfo</code>) directement visibles par votre communauté.</p>
+                        <div class="icon-wrapper">💎</div>
+                        <h3>Suivi des boosts</h3>
+                        <p>Consultez les membres qui boostent votre serveur et sa progression avec la commande <code>/boosts</code>.</p>
                     </div>
 
                     <div class="card">
-                        <div class="icon-wrapper">📢</div>
-                        <h3>Interaction Rapide</h3>
-                        <p>Envoi de messages personnalisés (<code>/say</code>) et ajout de réactions d'une simple commande (<code>/react</code>).</p>
+                        <div class="icon-wrapper">👋</div>
+                        <h3>Messages de bienvenue</h3>
+                        <p>Prévisualisez le message d'accueil configuré sur votre serveur avec la commande <code>/welcome_test</code>.</p>
                     </div>
 
                     <div class="card">
@@ -130,14 +130,6 @@
                     <!-- MODÉRATION -->
                     <div class="command-card">
                         <div class="command-header">
-                            <code>/clear &lt;nombre&gt;</code>
-                            <span class="cmd-badge mod">Modération</span>
-                        </div>
-                        <p>Supprime entre 1 et 100 messages dans le salon courant.</p>
-                    </div>
-
-                    <div class="command-card">
-                        <div class="command-header">
                             <code>/warn &lt;membre&gt; [raison]</code>
                             <span class="cmd-badge mod">Modération</span>
                         </div>
@@ -146,125 +138,67 @@
 
                     <div class="command-card">
                         <div class="command-header">
-                            <code>/warns &lt;membre&gt;</code>
+                            <code>/warns_list &lt;membre&gt;</code>
                             <span class="cmd-badge mod">Modération</span>
                         </div>
-                        <p>Affiche l'historique complet des avertissements d'un membre.</p>
+                        <p>Affiche les avertissements récents enregistrés pour un membre.</p>
                     </div>
 
                     <div class="command-card">
                         <div class="command-header">
-                            <code>/warn_list</code>
+                            <code>/unwarn &lt;id_avertissement&gt;</code>
                             <span class="cmd-badge mod">Modération</span>
                         </div>
-                        <p>Affiche la liste globale des membres avertis sur le serveur.</p>
-                    </div>
-
-                    <!-- CONFIGURATION -->
-                    <div class="command-card">
-                        <div class="command-header">
-                            <code>/set_welcome &lt;salon&gt;</code>
-                            <span class="cmd-badge config">Config</span>
-                        </div>
-                        <p>Définit le salon dédié aux messages de bienvenue.</p>
+                        <p>Retire un avertissement à partir de son identifiant.</p>
                     </div>
 
                     <div class="command-card">
                         <div class="command-header">
-                            <code>/set_welcome_message &lt;texte&gt;</code>
-                            <span class="cmd-badge config">Config</span>
+                            <code>/timeout &lt;membre&gt; &lt;durée_minutes&gt; [raison]</code>
+                            <span class="cmd-badge mod">Modération</span>
                         </div>
-                        <p>Personnalise le message d'accueil avec les variables <code>{user}</code>, <code>{server}</code>, <code>{count}</code>.</p>
+                        <p>Applique une exclusion temporaire de 1 minute à 28 jours.</p>
                     </div>
 
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/untimeout &lt;membre&gt; [raison]</code>
+                            <span class="cmd-badge mod">Modération</span>
+                        </div>
+                        <p>Retire l'exclusion temporaire active d'un membre.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/ban &lt;membre&gt; [raison]</code>
+                            <span class="cmd-badge mod">Modération</span>
+                        </div>
+                        <p>Bannit un membre du serveur.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/clear &lt;nombre&gt;</code>
+                            <span class="cmd-badge mod">Modération</span>
+                        </div>
+                        <p>Supprime le nombre indiqué de messages dans le salon courant.</p>
+                    </div>
+
+                    <!-- OUTILS SERVEUR -->
                     <div class="command-card">
                         <div class="command-header">
                             <code>/welcome_test</code>
-                            <span class="cmd-badge config">Config</span>
+                            <span class="cmd-badge feature">Serveur</span>
                         </div>
-                        <p>Simule et teste l'affichage du message de bienvenue.</p>
+                        <p>Envoie un aperçu du message de bienvenue configuré dans le salon dédié.</p>
                     </div>
 
                     <div class="command-card">
                         <div class="command-header">
-                            <code>/set_logs &lt;salon&gt;</code>
-                            <span class="cmd-badge config">Config</span>
-                        </div>
-                        <p>Définit le salon où seront envoyés les logs de modération et d'événements.</p>
-                    </div>
-
-                    <div class="command-card">
-                        <div class="command-header">
-                            <code>/set_autorole &lt;rôle&gt;</code>
-                            <span class="cmd-badge config">Config</span>
-                        </div>
-                        <p>Attribue automatiquement un rôle aux nouveaux arrivants.</p>
-                    </div>
-
-                    <div class="command-card">
-                        <div class="command-header">
-                            <code>/set_counting &lt;salon&gt;</code>
-                            <span class="cmd-badge config">Config</span>
-                        </div>
-                        <p>Configure le salon pour le jeu de comptage et y publie le règlement.</p>
-                    </div>
-
-                    <!-- MODULES -->
-                    <div class="command-card">
-                        <div class="command-header">
-                            <code>/setup_tickets &lt;rôle&gt;</code>
-                            <span class="cmd-badge feature">Module</span>
-                        </div>
-                        <p>Installe le panneau interactif pour l'ouverture de tickets de support.</p>
-                    </div>
-
-                    <div class="command-card">
-                        <div class="command-header">
-                            <code>/setup_reaction_menu</code>
-                            <span class="cmd-badge feature">Module</span>
-                        </div>
-                        <p>Crée un menu interactif d'attribution de rôles par réactions.</p>
-                    </div>
-
-                    <!-- INFORMATION & UTILITAIRES -->
-                    <div class="command-card">
-                        <div class="command-header">
-                            <code>/userinfo [membre]</code>
+                            <code>/boosts</code>
                             <span class="cmd-badge info">Info</span>
                         </div>
-                        <p>Affiche les informations détaillées sur un profil utilisateur.</p>
-                    </div>
-
-                    <div class="command-card">
-                        <div class="command-header">
-                            <code>/botinfo</code>
-                            <span class="cmd-badge info">Info</span>
-                        </div>
-                        <p>Affiche les informations du bot.</p>
-                    </div>
-
-                    <div class="command-card">
-                        <div class="command-header">
-                            <code>/serverinfo</code>
-                            <span class="cmd-badge info">Info</span>
-                        </div>
-                        <p>Affiche les données et statistiques générales du serveur.</p>
-                    </div>
-
-                    <div class="command-card">
-                        <div class="command-header">
-                            <code>/say &lt;message&gt; [salon]</code>
-                            <span class="cmd-badge util">Utilitaire</span>
-                        </div>
-                        <p>Envoie un message dans un salon spécifique au nom du bot.</p>
-                    </div>
-
-                    <div class="command-card">
-                        <div class="command-header">
-                            <code>/react &lt;émoji&gt;</code>
-                            <span class="cmd-badge util">Utilitaire</span>
-                        </div>
-                        <p>Ajoute la réaction spécifiée sur le message précédent.</p>
+                        <p>Affiche la liste des membres qui boostent le serveur et son niveau de boost.</p>
                     </div>
 
                 </div>
