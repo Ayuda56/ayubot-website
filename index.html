@@ -3,49 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090909">
     <title>AyuBot — Le Bot Discord Ultime</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="glow blob-1"></div>
-    <div class="glow blob-2"></div>
-
-    <!-- MENU LATÉRAL GAUCHE -->
-    <aside class="sidebar">
-        <div class="sidebar-logo">
-            <img src="Logo AyuBot.png" alt="AyuBot Logo">
-        </div>
-        <nav class="sidebar-nav">
-            <a href="#hero" class="sidebar-link" title="Accueil">
-                <span class="sidebar-icon">🏠</span>
-                <span class="sidebar-label">Accueil</span>
-            </a>
-            <a href="#features" class="sidebar-link" title="Fonctionnalités">
-                <span class="sidebar-icon">⚡</span>
-                <span class="sidebar-label">Options</span>
-            </a>
-            <a href="#commands" class="sidebar-link" title="Commandes">
-                <span class="sidebar-icon">⌨️</span>
-                <span class="sidebar-label">Commandes</span>
-            </a>
-        </nav>
-    </aside>
 
     <!-- CONTENU PRINCIPAL -->
     <div class="main-wrapper">
 
         <!-- NAVBAR -->
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Navigation principale">
             <div class="container nav-container">
-                <div class="logo-brand">
+                <a class="logo-brand" href="#hero" aria-label="AyuBot, accueil">
                     <img src="Logo AyuBot.png" alt="AyuBot Logo" class="nav-logo">
                     <span class="logo-text">AyuBot</span>
-                </div>
+                </a>
                 <div class="nav-links">
                     <a href="#commands" class="btn btn-secondary-nav">Commandes</a>
-                    <a href="https://discord.com/oauth2/authorize?client_id=1548009532238594080&permissions=8&integration_type=0&scope=bot" target="_blank" class="btn btn-nav">Inviter le Bot</a>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1548009532238594080&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener noreferrer" class="btn btn-nav">Inviter le Bot</a>
                 </div>
             </div>
         </nav>
@@ -62,7 +38,7 @@
                 <h1>Le bot moderne pour votre communauté</h1>
                 <p>Modération, logs, tickets et rôles réactions. Actuellement en cours de développement pour vous offrir la meilleure expérience possible.</p>
                 <div class="hero-buttons">
-                    <a href="https://discord.com/oauth2/authorize?client_id=1548009532238594080&permissions=8&integration_type=0&scope=bot" target="_blank" class="btn btn-primary">Ajouter à Discord</a>
+                    <a href="https://discord.com/oauth2/authorize?client_id=1548009532238594080&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ajouter à Discord</a>
                     <a href="#features" class="btn btn-secondary">Voir les options</a>
                     <a href="#commands" class="btn btn-secondary">Voir les commandes</a>
                 </div>
