@@ -54,25 +54,25 @@
                     <div class="card">
                         <div class="icon-wrapper">🛡️</div>
                         <h3>Modération complète</h3>
-                        <p>Avertissements, bannissements, timeouts, verrouillage des salons et suppression des messages depuis Discord.</p>
+                        <p>Avertissements, bannissements, timeouts, verrouillage des salons et suppression des messages. Consultez et gérez les avertissements, les bannissements et les débannissements depuis le panel.</p>
                     </div>
 
                     <div class="card">
                         <div class="icon-wrapper">🚫</div>
-                        <h3>Protection anti-spam</h3>
-                        <p>Activez le timeout automatique et ajustez le nombre de messages, la fenêtre de détection et sa durée depuis le dashboard.</p>
+                        <h3>Anti-spam & filtres automatiques</h3>
+                        <p>Configurez le seuil anti-spam et sa durée, bloquez les liens, invitations Discord ou mots et expressions choisis, puis activez si besoin un avertissement automatique.</p>
                     </div>
 
                     <div class="card">
                         <div class="icon-wrapper">👋</div>
                         <h3>Accueil & rôle automatique</h3>
-                        <p>Personnalisez le message et le salon de bienvenue, attribuez un rôle aux nouveaux membres et testez l'affichage avec <code>/welcome_test</code>.</p>
+                        <p>Personnalisez le message et le salon de bienvenue, attribuez un rôle aux nouveaux membres et prévisualisez le résultat avec <code>/welcome_test</code>.</p>
                     </div>
 
                     <div class="card">
                         <div class="icon-wrapper">📜</div>
                         <h3>Logs & historique</h3>
-                        <p>Consultez les avertissements, les bannissements, les messages supprimés, les arrivées et les changements de rôles. Choisissez le salon des logs.</p>
+                        <p>Choisissez le salon des logs et consultez les actions de modération, messages supprimés, arrivées, départs, changements de rôles et fermetures de tickets.</p>
                     </div>
 
                     <div class="card">
@@ -82,15 +82,51 @@
                     </div>
 
                     <div class="card">
-                        <div class="icon-wrapper">📊</div>
-                        <h3>Vue d'ensemble du serveur</h3>
-                        <p>Retrouvez le statut et la latence d'AyuBot, les avertissements et bannissements, ainsi que l'équipe de modération.</p>
+                        <div class="icon-wrapper">🎫</div>
+                        <h3>Tickets de support</h3>
+                        <p>Configurez le panneau, le salon, la catégorie, le rôle support et son message. Chaque demande ouvre un salon privé ; sa transcription est envoyée aux logs avant fermeture.</p>
                     </div>
 
                     <div class="card">
-                        <div class="icon-wrapper">🔎</div>
-                        <h3>Infos serveur & membres</h3>
-                        <p>Consultez les informations d'un membre avec <code>/userinfo</code>, celles du serveur avec <code>/serverinfo</code> et les boosters avec <code>/boosts</code>.</p>
+                        <div class="icon-wrapper">🎭</div>
+                        <h3>Rôles par réaction</h3>
+                        <p>Créez des panneaux multi-rôles avec emojis Unicode ou personnalisés. Gérez les associations, republiez un panneau ou supprimez-le depuis le dashboard.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-wrapper">👥</div>
+                        <h3>Équipe de modération</h3>
+                        <p>Consultez les administrateurs et modérateurs, leur statut Discord et leur présence sur le panel, avec actualisation de l'équipe.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-wrapper">📈</div>
+                        <h3>Statistiques sur 30 jours</h3>
+                        <p>Suivez le nombre de messages, les arrivées, les départs et les actions de modération avec des graphiques et un détail journalier en UTC.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-wrapper">📊</div>
+                        <h3>Vue d'ensemble & statut</h3>
+                        <p>Retrouvez les compteurs d'avertissements, de bannissements et de modérateurs, ainsi que le statut et la latence du bot.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-wrapper">🤖</div>
+                        <h3>Infos bot, serveur & membres</h3>
+                        <p>Consultez les informations d'AyuBot avec <code>/botinfo</code>, d'un membre avec <code>/userinfo</code>, du serveur avec <code>/serverinfo</code> et des boosts avec <code>/boosts</code>.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-wrapper">🔔</div>
+                        <h3>Annonces de mises à jour</h3>
+                        <p>Les nouvelles mises à jour publiées sur GitHub peuvent être annoncées dans les salons de logs configurés des serveurs.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="icon-wrapper">🔐</div>
+                        <h3>Accès par Discord</h3>
+                        <p>Connectez-vous avec Discord et gérez uniquement les serveurs où vous disposez des permissions nécessaires.</p>
                     </div>
 
                 </div>
@@ -176,6 +212,15 @@
                         <p>Rétablit l'envoi de messages dans un salon textuel.</p>
                     </div>
 
+                    <!-- RÔLES -->
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/role_reaction &lt;rôle&gt; &lt;émoji&gt; [salon] [description]</code>
+                            <span class="cmd-badge feature">Rôles</span>
+                        </div>
+                        <p>Publie un message interactif pour attribuer un rôle à la réaction choisie.</p>
+                    </div>
+
                     <!-- CONFIGURATION & INFORMATIONS -->
                     <div class="command-card">
                         <div class="command-header">
@@ -199,6 +244,14 @@
                             <span class="cmd-badge info">Info</span>
                         </div>
                         <p>Affiche le profil, les rôles et les informations utiles d'un membre.</p>
+                    </div>
+
+                    <div class="command-card">
+                        <div class="command-header">
+                            <code>/botinfo</code>
+                            <span class="cmd-badge info">Info</span>
+                        </div>
+                        <p>Affiche le statut, la latence, le temps en ligne et les informations techniques d'AyuBot.</p>
                     </div>
 
                     <div class="command-card">
